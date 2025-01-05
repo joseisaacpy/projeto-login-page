@@ -1,0 +1,151 @@
+/* fonte */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* variaveis */
+:root {
+  --font1: "Poppins", sans-serif;
+  --btn-color: #0056fb;
+  --bg-padrao: #0056fb;
+  --bg-white: #ffffff;
+  --bg-black: #000000;
+}
+
+/* html */
+html {
+  font-size: 16px;
+}
+
+/* body */
+body {
+  font-family: var(--font1);
+  font-size: 1rem;
+  background-color: var(--bg-white);
+}
+
+/* container */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.colunm {
+  width: 100%;
+  height: 100%;
+}
+.colunm.left {
+  background: var(--bg-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.colunm.left div.div-form {
+  padding: 1em;
+
+  width: 80%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 80%;
+  height: 44px;
+  margin: 12px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+/* placeholder */
+input::placeholder {
+  padding-left: 20px;
+}
+
+/* div do checkbox */
+div.check {
+  margin-bottom: 12px;
+}
+
+/* btn */
+input[type="submit"] {
+  width: 80%;
+
+  height: 44px;
+
+  color: var(--bg-white);
+  background-color: var(--bg-padrao);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.div-form a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.div-form a:hover {
+  text-decoration: underline;
+}
+/* coluna da direita */
+.colunm.rigth {
+  background: var(--bg-padrao);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.colunm.rigth img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.div-texto {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-white);
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .colunm.left div.div-form {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .colunm.rigth img {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
